@@ -1,7 +1,7 @@
 const QUOTES = [
   {
     quote:
-      "Fielding rebuilt our lifecycle program in six weeks and it just works now. I stopped worrying about email.",
+      "The Social Ladder rebuilt our lifecycle program in six weeks and it just works now. I stopped worrying about email.",
     name: "Dana Ferris",
     role: "Founder, Loamworks",
   },

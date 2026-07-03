@@ -12,7 +12,7 @@ export function Cta() {
           day with next steps, not a sales call.
         </p>
         <div className="mt-9 flex justify-center">
-          <Button href="mailto:hello@fieldingmarketing.co">Start a project</Button>
+          <Button href="mailto:hello@thesocialladder.co">Start a project</Button>
         </div>
       </div>
     </section>

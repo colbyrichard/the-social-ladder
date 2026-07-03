@@ -3,9 +3,9 @@ import { display, body as bodyFont } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fielding Marketing Co. | Marketing for founder-led brands",
+  title: "The Social Ladder | Marketing for founder-led brands",
   description:
-    "Fielding is a marketing partner for founder-led brands that have outgrown guesswork. Strategy, brand, and growth marketing under one roof.",
+    "The Social Ladder is a marketing partner for founder-led brands that have outgrown guesswork. Strategy, brand, and growth marketing under one roof.",
 };
 
 export default function RootLayout({

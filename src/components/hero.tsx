@@ -21,8 +21,8 @@ export function Hero() {
             The marketing partner for brands that outgrew guesswork.
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-muted">
-            Fielding runs strategy, brand, and growth marketing for founder-led
-            companies ready to scale past word of mouth.
+            The Social Ladder runs strategy, brand, and growth marketing for
+            founder-led companies ready to scale past word of mouth.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Button href="#contact">Start a project</Button>
@@ -41,8 +41,8 @@ export function Hero() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-card border border-line">
             <Image
-              src="https://picsum.photos/seed/fielding-studio-desk/900/1125"
-              alt="Still life photography used as the Fielding brand's editorial visual style"
+              src="https://picsum.photos/seed/social-ladder-studio-desk/900/1125"
+              alt="Still life photography used as the brand's editorial visual style"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"

@@ -37,8 +37,8 @@ export function Footer() {
             <p className="text-sm font-medium text-ink">Contact</p>
             <ul className="mt-4 flex flex-col gap-3">
               <li>
-                <a href="mailto:hello@fieldingmarketing.co" className="text-sm text-ink-muted hover:text-ink">
-                  hello@fieldingmarketing.co
+                <a href="mailto:hello@thesocialladder.co" className="text-sm text-ink-muted hover:text-ink">
+                  hello@thesocialladder.co
                 </a>
               </li>
               <li>
@@ -53,7 +53,7 @@ export function Footer() {
 
       <div className="mx-auto mt-12 max-w-7xl px-6">
         <div className="border-t border-line pt-6 text-xs text-ink-faint">
-          © 2026 Fielding Marketing Co.
+          © 2026 The Social Ladder
         </div>
       </div>
     </footer>

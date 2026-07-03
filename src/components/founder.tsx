@@ -8,7 +8,8 @@ export function Founder() {
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-ink-muted">
             Megan Voss spent seven years leading growth at two DTC brands
-            before starting Fielding. She&apos;s still the one on your calls.
+            before starting The Social Ladder. She&apos;s still the one on
+            your calls.
           </p>
         </div>
 
