@@ -74,7 +74,8 @@ export function Process() {
     return (
       <section id="process" className="border-b border-line py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+          <span className="font-mono text-xs uppercase tracking-widest text-accent">How it runs</span>
+          <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
             A plan you can see before you sign anything.
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">

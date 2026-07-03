@@ -23,11 +23,12 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="border-b border-line py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        <span className="font-mono text-xs uppercase tracking-widest text-accent">Client notes</span>
+        <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
           What clients notice first.
         </h2>
 
-        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-card border border-line bg-line md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-card border border-line bg-line md:grid-cols-3">
           {QUOTES.map((item) => (
             <figure key={item.name} className="flex flex-col justify-between bg-surface p-8">
               <blockquote className="font-display text-lg leading-snug text-ink">

@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 /*
-  Fielding Marketing Co. — locked dark brand.
-  Single intentional theme (Section 4.11): near-black canvas, one signal-orange
-  accent. No light-mode variant; contrast is verified against these exact
-  tokens rather than maintaining parallel light/dark work.
+  The Social Ladder — locked dark brand, v2.
+  Earth-tone futurist: warm bark canvas, single fern-green signal accent,
+  monospace data readouts. Contrast verified against these exact tokens.
 */
 @theme inline {
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 
-  --color-canvas: #0b0b0c;
-  --color-surface: #17171a;
-  --color-surface-2: #1f1f23;
-  --color-ink: #f5f4f1;
-  --color-ink-muted: #a9a8a4;
-  --color-ink-faint: #807f7b;
-  --color-accent: #f4602e;
-  --color-accent-dim: #c94d24;
-  --color-accent-ink: #1a0d07;
-  --color-line: rgba(245, 244, 241, 0.12);
-  --color-line-strong: rgba(245, 244, 241, 0.22);
+  --color-canvas: #100e0b;
+  --color-surface: #1b1712;
+  --color-surface-2: #251f17;
+  --color-ink: #f3ede2;
+  --color-ink-muted: #b7ac96;
+  --color-ink-faint: #998e68;
+  --color-accent: #8fb56c;
+  --color-accent-dim: #7a9a5c;
+  --color-accent-ink: #0e1509;
+  --color-line: rgba(243, 237, 226, 0.12);
+  --color-line-strong: rgba(243, 237, 226, 0.22);
 
-  --radius-card: 0.875rem;
+  --radius-card: 0.75rem;
   --radius-input: 0.5rem;
 }
 
@@ -32,11 +32,21 @@ html {
 
 body {
   background: var(--color-canvas);
+  background-image:
+    linear-gradient(rgba(243, 237, 226, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 237, 226, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center top;
 }
 
 ::selection {
   background: var(--color-accent);
   color: var(--color-accent-ink);
+}
+
+.font-mono-tab {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -50,11 +60,65 @@ body {
   }
 }
 
-/* Services bento: 5 items, 5 cells, explicit mobile stack. */
+/* Border Beam — hand-rolled, inspired by beam.jakubantalik.com.
+   A conic-gradient comet rotates behind a masked border ring. */
+@property --beam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.border-beam {
+  position: relative;
+  isolation: isolate;
+}
+
+.border-beam::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--beam-angle),
+    transparent 0%,
+    var(--color-accent) 8%,
+    #e8f0d8 12%,
+    var(--color-accent) 16%,
+    transparent 26%,
+    transparent 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam-rotate 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes beam-rotate {
+  to {
+    --beam-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .border-beam::before {
+    animation: none;
+    background: conic-gradient(var(--color-accent), transparent 30%);
+  }
+}
+
+/* Services bento: 5 items, explicit mobile stack. */
 .bento-services {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -80,5 +144,22 @@ body {
   }
   .bento-services .cell-e {
     grid-area: e;
+  }
+}
+
+/* Data strip marquee */
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker-scroll 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
   }
 }

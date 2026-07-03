@@ -14,8 +14,8 @@ export function Footer() {
         <div className="max-w-xs">
           <Wordmark className="text-ink" />
           <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-            A small studio in Austin, TX, running marketing for founder-led
-            brands.
+            A small studio in Austin, TX, running social-first marketing for
+            founder-led brands.
           </p>
         </div>
 

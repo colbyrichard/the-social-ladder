@@ -21,10 +21,15 @@ function ClientMark({ name, mark }: { name: string; mark: string }) {
 export function LogoWall() {
   return (
     <section className="border-b border-line py-12">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-6 px-6">
-        {CLIENTS.map((client) => (
-          <ClientMark key={client.name} {...client} />
-        ))}
+      <div className="mx-auto max-w-7xl px-6">
+        <p className="mb-6 text-center font-mono text-xs uppercase tracking-widest text-ink-faint">
+          Trusted by founder-led brands
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          {CLIENTS.map((client) => (
+            <ClientMark key={client.name} {...client} />
+          ))}
+        </div>
       </div>
     </section>
   );
