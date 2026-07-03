@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/*
+  Fielding Marketing Co. — locked dark brand.
+  Single intentional theme (Section 4.11): near-black canvas, one signal-orange
+  accent. No light-mode variant; contrast is verified against these exact
+  tokens rather than maintaining parallel light/dark work.
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --color-canvas: #0b0b0c;
+  --color-surface: #17171a;
+  --color-surface-2: #1f1f23;
+  --color-ink: #f5f4f1;
+  --color-ink-muted: #a9a8a4;
+  --color-ink-faint: #807f7b;
+  --color-accent: #f4602e;
+  --color-accent-dim: #c94d24;
+  --color-accent-ink: #1a0d07;
+  --color-line: rgba(245, 244, 241, 0.12);
+  --color-line-strong: rgba(245, 244, 241, 0.22);
+
+  --radius-card: 0.875rem;
+  --radius-input: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Services bento: 5 items, 5 cells, explicit mobile stack. */
+.bento-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .bento-services {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, minmax(180px, auto));
+    grid-template-areas:
+      "a a a a b b"
+      "a a a a c c"
+      "d d d e e e";
+  }
+  .bento-services .cell-a {
+    grid-area: a;
+  }
+  .bento-services .cell-b {
+    grid-area: b;
+  }
+  .bento-services .cell-c {
+    grid-area: c;
+  }
+  .bento-services .cell-d {
+    grid-area: d;
+  }
+  .bento-services .cell-e {
+    grid-area: e;
+  }
 }
