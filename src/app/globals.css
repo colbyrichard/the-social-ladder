@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
 /*
-  The Social Ladder — locked dark brand, v2.
-  Earth-tone futurist: warm bark canvas, single fern-green signal accent,
-  monospace data readouts. Contrast verified against these exact tokens.
+  The Social Ladder — locked dark brand, v3.
+  Romantic elegance: deep oxblood canvas, a single dusty-rose accent,
+  Sentient serif display. Quiet, warm, unhurried. Contrast verified
+  against these exact tokens.
 */
 @theme inline {
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-mono: var(--font-mono);
 
-  --color-canvas: #100e0b;
-  --color-surface: #1b1712;
-  --color-surface-2: #251f17;
-  --color-ink: #f3ede2;
-  --color-ink-muted: #b7ac96;
-  --color-ink-faint: #998e68;
-  --color-accent: #8fb56c;
-  --color-accent-dim: #7a9a5c;
-  --color-accent-ink: #0e1509;
-  --color-line: rgba(243, 237, 226, 0.12);
-  --color-line-strong: rgba(243, 237, 226, 0.22);
+  --color-canvas: #1b0c0f;
+  --color-surface: #271115;
+  --color-surface-2: #33171c;
+  --color-ink: #f4e7e3;
+  --color-ink-muted: #cdaaa6;
+  --color-ink-faint: #b1817d;
+  --color-accent: #c77b74;
+  --color-accent-dim: #b5675f;
+  --color-accent-ink: #22090a;
+  --color-line: rgba(244, 231, 227, 0.11);
+  --color-line-strong: rgba(244, 231, 227, 0.2);
 
   --radius-card: 0.75rem;
   --radius-input: 0.5rem;
@@ -32,11 +33,12 @@ html {
 
 body {
   background: var(--color-canvas);
-  background-image:
-    linear-gradient(rgba(243, 237, 226, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(243, 237, 226, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  background-position: center top;
+  background-image: radial-gradient(
+    120% 80% at 50% -10%,
+    rgba(199, 123, 116, 0.1),
+    transparent 60%
+  );
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -61,7 +63,8 @@ body {
 }
 
 /* Border Beam — hand-rolled, inspired by beam.jakubantalik.com.
-   A conic-gradient comet rotates behind a masked border ring. */
+   Kept slow and soft here: a single warm ember drifting around the ring,
+   used sparingly for one elegant moment rather than everywhere. */
 @property --beam-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -82,10 +85,10 @@ body {
   background: conic-gradient(
     from var(--beam-angle),
     transparent 0%,
-    var(--color-accent) 8%,
-    #e8f0d8 12%,
-    var(--color-accent) 16%,
-    transparent 26%,
+    var(--color-accent) 10%,
+    #f0cfc9 14%,
+    var(--color-accent) 18%,
+    transparent 32%,
     transparent 100%
   );
   -webkit-mask:
@@ -93,8 +96,9 @@ body {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  animation: beam-rotate 7s linear infinite;
+  animation: beam-rotate 12s linear infinite;
   pointer-events: none;
+  opacity: 0.8;
 }
 
 @keyframes beam-rotate {
@@ -147,7 +151,7 @@ body {
   }
 }
 
-/* Data strip marquee */
+/* Data strip marquee — slow, unhurried drift. */
 @keyframes ticker-scroll {
   to {
     transform: translateX(-50%);
@@ -155,7 +159,7 @@ body {
 }
 
 .ticker-track {
-  animation: ticker-scroll 38s linear infinite;
+  animation: ticker-scroll 52s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,8 +3,8 @@ export function Founder() {
     <section className="border-b border-line bg-surface py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7 lg:order-1">
-          <span className="font-mono text-xs uppercase tracking-widest text-accent">Who runs it</span>
-          <h2 className="mt-3 max-w-md font-display text-3xl font-semibold leading-tight tracking-tight text-ink md:text-4xl">
+          <span className="font-display text-sm italic tracking-wide text-accent">Who runs it</span>
+          <h2 className="mt-3 max-w-md font-display text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl">
             Every account, run by someone who&apos;s done it in-house.
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-ink-muted">
@@ -20,7 +20,7 @@ export function Founder() {
             style={{ background: "radial-gradient(circle, var(--color-accent), transparent 70%)" }}
             aria-hidden="true"
           />
-          <span className="relative font-display text-6xl font-bold text-ink sm:text-7xl">
+          <span className="relative font-display text-6xl font-medium text-ink sm:text-7xl">
             MV
           </span>
         </div>

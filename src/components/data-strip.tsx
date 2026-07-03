@@ -1,6 +1,6 @@
 const BENCHMARKS = [
   { stat: "64%", body: "of marketers say short-form video drives the highest ROI of any content format", source: "HubSpot, State of Marketing 2024" },
-  { stat: "5.5%", body: "average engagement rate on TikTok — the highest of any major platform", source: "Socialinsider, Social Media Benchmarks 2024" },
+  { stat: "5.5%", body: "average engagement rate on TikTok, the highest of any major platform", source: "Socialinsider, Social Media Benchmarks 2024" },
   { stat: "0.60%", body: "typical organic engagement rate on a B2C Instagram post", source: "Rival IQ, 2024 Benchmark Report" },
   { stat: "90%", body: "of TikTok users open the app at least once every day", source: "TikTok / Kantar" },
   { stat: "82%", body: "of consumers say user-generated content sways a purchase decision", source: "Sprout Social Index, 2024" },

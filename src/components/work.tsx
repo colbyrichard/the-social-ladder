@@ -30,8 +30,8 @@ export function Work() {
   return (
     <section id="work" className="border-b border-line py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <span className="font-mono text-xs uppercase tracking-widest text-accent">Results</span>
-        <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        <span className="font-display text-sm italic tracking-wide text-accent">Results</span>
+        <h2 className="mt-3 max-w-lg font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
           Work that changed the number that mattered.
         </h2>
       </div>

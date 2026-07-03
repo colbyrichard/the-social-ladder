@@ -7,10 +7,10 @@ export function Cta() {
       <div className="mx-auto max-w-3xl px-6">
         <BorderBeam className="bg-surface">
           <div className="px-8 py-16 text-center md:px-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">
+            <span className="font-display text-sm italic tracking-wide text-accent">
               Let&apos;s talk growth
             </span>
-            <h2 className="mt-4 font-display text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl">
+            <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-ink md:text-5xl">
               Ready to stop guessing what&apos;s working?
             </h2>
             <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-ink-muted">

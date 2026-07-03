@@ -3,9 +3,9 @@ import { display, body as bodyFont, mono } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Social Ladder | Social-first marketing, built on data",
+  title: "The Social Ladder | Marketing with a little romance",
   description:
-    "The Social Ladder is a social-media marketing studio for founder-led brands. Strategy, content, and growth marketing built for how people actually scroll.",
+    "The Social Ladder is a social-media marketing studio for founder-led brands. Elegant, considered strategy and content that makes attention feel personal.",
 };
 
 export default function RootLayout({

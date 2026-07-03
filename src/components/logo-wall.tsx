@@ -12,7 +12,7 @@ function ClientMark({ name, mark }: { name: string; mark: string }) {
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <circle cx="14" cy="14" r="13" stroke="currentColor" strokeWidth="1.2" />
       </svg>
-      <span className="font-display text-sm font-semibold tracking-wide">{mark}</span>
+      <span className="font-display text-sm font-medium tracking-wide">{mark}</span>
       <span className="sr-only">{name}</span>
     </div>
   );

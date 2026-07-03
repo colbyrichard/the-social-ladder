@@ -74,15 +74,15 @@ export function Process() {
     return (
       <section id="process" className="border-b border-line py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <span className="font-mono text-xs uppercase tracking-widest text-accent">How it runs</span>
-          <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+          <span className="font-display text-sm italic tracking-wide text-accent">How it runs</span>
+          <h2 className="mt-3 max-w-lg font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
             A plan you can see before you sign anything.
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             {STEPS.map((step) => (
               <div key={step.title} className="rounded-card border border-line bg-surface p-8">
                 <step.icon size={28} weight="duotone" className="text-accent" />
-                <h3 className="mt-5 font-display text-2xl font-semibold text-ink">{step.title}</h3>
+                <h3 className="mt-5 font-display text-2xl font-medium text-ink">{step.title}</h3>
                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-muted">{step.body}</p>
               </div>
             ))}
@@ -95,7 +95,7 @@ export function Process() {
   return (
     <section id="process" ref={wrapRef} className="relative border-b border-line">
       <div className="mx-auto max-w-7xl px-6 pt-24">
-        <h2 className="max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        <h2 className="max-w-lg font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
           A plan you can see before you sign anything.
         </h2>
       </div>
@@ -106,12 +106,12 @@ export function Process() {
           className="process-card sticky top-0 flex min-h-[100dvh] items-center justify-center px-6"
         >
           <div className="mx-auto flex w-full max-w-4xl flex-col items-start gap-8 rounded-card border border-line bg-surface p-10 md:flex-row md:items-center md:p-16">
-            <span className="font-display text-6xl font-bold text-accent md:text-8xl">
+            <span className="font-display text-6xl font-medium text-accent md:text-8xl">
               0{i + 1}
             </span>
             <div>
               <step.icon size={32} weight="duotone" className="text-accent" />
-              <h3 className="mt-4 font-display text-3xl font-semibold text-ink md:text-4xl">
+              <h3 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
                 {step.title}
               </h3>
               <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">

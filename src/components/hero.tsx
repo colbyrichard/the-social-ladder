@@ -27,17 +27,18 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-7"
         >
-          <span className="inline-flex items-center gap-2 rounded-input border border-line-strong px-3 py-1 font-mono text-xs uppercase tracking-widest text-accent">
-            Social-first growth
+          <span className="font-display text-sm italic tracking-wide text-accent">
+            A social-first studio
           </span>
 
-          <h1 className="mt-6 max-w-2xl font-display text-4xl font-semibold leading-[1.06] tracking-tight text-ink md:text-6xl">
-            Marketing built for the scroll.
+          <h1 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-[1.12] tracking-tight text-ink md:text-6xl">
+            Marketing with a little{" "}
+            <em className="italic text-accent">romance</em>.
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-muted">
             The Social Ladder is a strategy and social-marketing studio for
-            founder-led brands. We turn attention into a repeatable growth
-            channel, not a lucky post.
+            founder-led brands. We make attention feel personal, then turn it
+            into a channel you can count on.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Button href="#contact">Start a project</Button>

@@ -23,8 +23,8 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="border-b border-line py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <span className="font-mono text-xs uppercase tracking-widest text-accent">Client notes</span>
-        <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        <span className="font-display text-sm italic tracking-wide text-accent">Client notes</span>
+        <h2 className="mt-3 max-w-lg font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
           What clients notice first.
         </h2>
 
